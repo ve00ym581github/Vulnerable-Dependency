@@ -1,0 +1,24 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    dependencies {
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.42")
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.1.1"
+        classpath "org.owasp:dependency-check-gradle:8.2.1"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+}
+
+//Task for creating SBOM
+task generateSBOM(type: Exec) {
+    commandLine 'cmd', '/c', 'gradle cyclonedxBom'
+}
+
+//Task for DependencyVulnerability Check
+task generateVunerability(type: Exec) {
+    commandLine 'cmd', '/c', 'gradle dependencyCheckAnalyze'
+}
