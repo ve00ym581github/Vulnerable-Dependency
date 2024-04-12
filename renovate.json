@@ -1,22 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    ":preserveSemverRanges",
-    ":dependencyDashboard",
-    ":rebaseStalePrs",
-    ":enableVulnerabilityAlertsWithLabel('security')",
-    "group:recommended"
-  ],
-  "endpoint": "https://gitlab.ymslilabs.com",
-  "platform": "gitlab",
-  "persistRepoData": true,
-  "logFileLevel": "error",
-  "onboardingConfig": {
-    "extends": ["renovate/renovate-config"]
-  },
-  "repositories": [
-    "ymsli/VulnerableDependency"
-  ],
-  "autodiscover": true
+    "config:base"
+  ]
 }
