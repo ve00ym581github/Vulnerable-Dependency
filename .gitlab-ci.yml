@@ -4,5 +4,3 @@ renovate:
     REN_GITHUB_TOKEN: $REN_GITHUB_TOKEN
   script:
     - renovate
-  only:
-    - schedules
