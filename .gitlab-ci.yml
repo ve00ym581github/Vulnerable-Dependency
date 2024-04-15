@@ -1,6 +1,6 @@
 renovate:
   image: renovate/renovate:latest
   script:
-    - renovate --config renovate.json
+    - renovate
   only:
     - schedules
