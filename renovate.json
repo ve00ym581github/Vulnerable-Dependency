@@ -1,6 +1,6 @@
 {
   "platform": "gitlab",
-  "token": "${RENOVATE_TOKEN}",
+  "token": "${REN_GITHUB_TOKEN}",
   "extends": ["config:base"],
   "autodiscover": true,
   "packageRules": [
