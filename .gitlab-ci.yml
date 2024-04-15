@@ -1,7 +1,7 @@
 renovate:
   image: renovate/renovate:latest
   variables:
-    REN_GITHUB_TOKEN: $ACCESS_TOKEN
+    REN_GITHUB_TOKEN: $REN_GITHUB_TOKEN
   script:
     - renovate
   only:
