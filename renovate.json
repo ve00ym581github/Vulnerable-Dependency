@@ -1,6 +1,15 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ]
+  "platform": "gitlab",
+  "token": "${RENOVATE_TOKEN}",
+  "extends": ["config:base"],
+  "autodiscover": true,
+  "packageRules": [
+    {
+      "packageNames": ["*"],
+      "automerge": true
+    }
+  ],
+  "baseBranches": ["master", "develop"],
+  "ignoreDeps": ["^androidx\\."],
+  "timezone": "Asia/Kolkata"
 }
