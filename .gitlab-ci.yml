@@ -1,6 +1,6 @@
 renovate:
   image: renovate/renovate:latest
   variables:
-    REN_GITHUB_TOKEN: $REN_GITHUB_TOKEN
+    REN_GITHUB_TOKEN: "glpat-Qx2WD9rKUdDmrYCzBhhQ"
   script:
     - renovate
